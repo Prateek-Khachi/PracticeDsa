@@ -8,7 +8,9 @@ int minRats(int n)
 
 int main()
 {
-    int n = 1025;
+    int n;
+    cout<<"Enter Number Of Bottles To Test: ";
+    cin>>n;
 
     cout << "Minimum " << minRats(n)
          << " rat(s) are required"
