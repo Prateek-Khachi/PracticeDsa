@@ -9,8 +9,7 @@ int minRats(int n)
 int main()
 {
     int n;
-    cout<<"
-    Number Of Bottles To Test: ";
+    cout<<"Number Of Bottles To Test: ";
     cin>>n;
 
     cout << "Minimum " << minRats(n)
