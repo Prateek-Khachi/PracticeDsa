@@ -10,29 +10,17 @@ public:
         for (int i = temp.size() - 1; i >= 0; i--)
         {
 
-            if (st.empty())
+            while (!st.empty() && temp[i] >= temp[st.top()])
             {
-                st.push(i);
-                ans[i] = 0;
+                st.pop();
             }
-            else
+
+            if (!st.empty())
             {
-                while (!st.empty() && temp[i] >= temp[st.top()])
-                {
-                    st.pop();
-                }
-
-                if (st.empty())
-                {
-                    ans[i] = 0;
-                }
-                else
-                {
-                    ans[i] = st.top() - i;
-                }
-
-                st.push(i);
+                ans[i] = st.top() - i;
             }
+
+            st.push(i);
         }
 
         return ans;
